@@ -3,7 +3,7 @@ package com.example.p02moviles2220022222101735
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.navigation.compose.rememberNavController
+import androidx.activity.enableEdgeToEdge
 import com.example.p02moviles2220022222101735.presentation.navigation.AppNavGraph
 import com.example.p02moviles2220022222101735.ui.theme.P02MOVILES2220022222101735Theme
 import dagger.hilt.android.AndroidEntryPoint
@@ -14,8 +14,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             P02MOVILES2220022222101735Theme {
-                val navController = rememberNavController()
-                AppNavGraph(navController = navController)
+                AppNavGraph()
             }
         }
     }
